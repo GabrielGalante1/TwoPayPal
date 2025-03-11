@@ -31,7 +31,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CartaovisitalTheme {
-                // Chama o Composable da tela do Cartão de Visita
                 BusinessCardScreen()
             }
         }
@@ -39,7 +38,7 @@ class MainActivity : ComponentActivity() {
 }
 @Composable
 fun BusinessCardScreen() {
-    val backgroundColor = Color(0xFFD8EECF) // Cor de fundo semelhante à da imagem
+    val backgroundColor = Color(0xFFD8EECF)
 
     Box(
         modifier = Modifier
@@ -59,22 +58,21 @@ fun BusinessCardScreen() {
             )
             // Nome e cargo
             Text(
-                text = "Jose Doao",
+                text = "José",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.Black
             )
             Text(
-                text = "Android Developer Extraordinaire",
+                text = "Desenvolvedor em Java",
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Medium,
-                color = Color(0xFF2E7D32) // Verde escuro
+                color = Color(0xFF2E7D32)
             )
             Spacer(modifier = Modifier.height(16.dp))
-            // Informações de contato
-            ContactInfo(icon = Icons.Default.Phone, text = "+66 (112) 800 289 221")
+            ContactInfo(icon = Icons.Default.Phone, text = "+55 (11) 942889981")
             ContactInfo(icon = Icons.Default.Share, text = "@AndroidDev")
-            ContactInfo(icon = Icons.Default.Email, text = "jose.doao@android.com")
+            ContactInfo(icon = Icons.Default.Email, text = "jose_@android.com")
         }
     }
 }
@@ -84,13 +82,13 @@ fun ContactInfo(icon: ImageVector, text: String) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp),
-        modifier = Modifier.padding(horizontal = 16.dp) // Ajuste de padding horizontal
+        modifier = Modifier.padding(horizontal = 16.dp)
     ) {
         Icon(
             imageVector = icon,
             contentDescription = null,
             tint = Color(0xFF2E7D32),
-            modifier = Modifier.size(20.dp) // Ajuste o tamanho do ícone
+            modifier = Modifier.size(20.dp)
         )
         Text(text = text, fontSize = 14.sp, color = Color.Black)
     }
